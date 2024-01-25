@@ -151,7 +151,14 @@ if st.button('Predict'):
     # Display the prediction
 
     if prediction[0] == 0:
-        st.write(f'The probability of LAA clot is LOW' )
+        html_code = """
+            <h3 style="Text-align: center"> The probability of LAA clot is LOW </h3>
+            """
+        st.markdown(html_code, unsafe_allow_html=True)
     else:
-        st.write(f'The probability of LAA clot is HIGH')
+        html_code = """
+            <h3 style="Text-align: center"> The probability of LAA clot is HIGH </h3>
+            """
+        st.markdown(html_code, unsafe_allow_html=True)
+
 # ['Age', 'Sex', 'LAA_clot', 'SEC', 'EP_Procedure', 'Arrythmia_proceding_EPS', 'Katz score', 'Atherosclerosis distribution', 'AV calcification', 'HTN', 'CHF', 'CVA', 'DM', 'Vascular_Dz', 'Age ≥75', 'Age ≥65', 'CHADS2-VASC', 'Anticoag', 'LA_diam', 'LVEF', 'Valvular_Dz'],
